@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Form</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="form-window">
+    <div class="form-title">Loan Application Form</div>
+
+    <form action="/predict" method="post">
+      <div class="form-columns">
+
+        <!-- Column 1 -->
+        <div class="column">
+          <div class="question">
+            <label for="person_age">1. How old are you?</label><br>
+            <input type="number" id="person_age" name="person_age" min="18" max="100" required>
+          </div>
+
+          <div class="question">
+            <label for="person_gender_male">2. What is your gender?</label><br>
+            <select id="person_gender_male" name="person_gender_male">
+              <option value="0">Female</option>
+              <option value="1">Male</option>
+            </select>
+          </div>
+
+          <div class="question">
+            <label for="person_education">3. What is your highest completed education level?</label><br>
+            <select id="person_education" name="person_education">
+              <option value="0">High School</option>
+              <option value="1">Associate Degree</option>
+              <option value="2">Bachelor’s Degree</option>
+              <option value="3">Master’s Degree</option>
+              <option value="4">Doctorate</option>
+            </select>
+          </div>
+
+          <div class="question">
+            <label for="person_income">4. What is your annual income (in USD)?</label><br>
+            <input type="number" id="person_income" name="person_income" required>
+          </div>
+
+          <div class="question">
+            <label for="person_emp_exp">5. How many years of full-time work experience do you have?</label><br>
+            <input type="number" id="person_emp_exp" name="person_emp_exp" min="0" max="50" required>
+          </div>
+
+          <div class="question">
+            <label for="person_home_ownership">6. What is your home ownership status?</label><br>
+            <select id="person_home_ownership" name="person_home_ownership">
+              <option value="0">Rent</option>
+              <option value="1">Own</option>
+              <option value="2">Mortgage</option>
+              <option value="3">Other</option>
+            </select>
+          </div>
+
+          <div class="question">
+            <label for="loan_amnt">7. How much loan are you applying for?</label><br>
+            <input type="number" id="loan_amnt" name="loan_amnt" required>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column">
+          <div class="question">
+            <label for="loan_intent">8. What is the purpose of your loan?</label><br>
+            <select id="loan_intent" name="loan_intent">
+              <option value="0">Personal</option>
+              <option value="1">Education</option>
+              <option value="2">Medical</option>
+              <option value="3">Venture</option>
+              <option value="4">Home Improvement</option>
+              <option value="5">Debt Consolidation</option>
+            </select>
+          </div>
+
+          <div class="question">
+            <label for="loan_int_rate">9. What is the interest rate you expect or were offered? (%)</label><br>
+            <input type="number" step="0.01" id="loan_int_rate" name="loan_int_rate" required>
+          </div>
+
+          <div class="question">
+            <label for="loan_percent_income">10. What percentage of your income will be used to repay the loan?</label><br>
+            <input type="number" step="0.01" id="loan_percent_income" name="loan_percent_income" required>
+          </div>
+
+          <div class="question">
+            <label for="cb_person_cred_hist_length">11. How many years have you had a credit history?</label><br>
+            <input type="number" id="cb_person_cred_hist_length" name="cb_person_cred_hist_length" min="0" max="50" required>
+          </div>
+
+          <div class="question">
+            <label for="credit_score">12. What is your credit score?</label><br>
+            <input type="number" id="credit_score" name="credit_score" min="300" max="850" required>
+          </div>
+
+          <div class="question">
+            <label for="previous_loan_defaults_on_file_Yes">13. Have you ever defaulted on a loan?</label><br>
+            <select id="previous_loan_defaults_on_file_Yes" name="previous_loan_defaults_on_file_Yes">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-button">
+        <button id="sub-but" type="submit">Check Loan Approval</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
