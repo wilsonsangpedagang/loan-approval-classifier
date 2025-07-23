@@ -1,0 +1,163 @@
+/* styles.css */
+
+.winky-title {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #eae2b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Winky Rough', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #003049
+}
+
+.home_window {
+  width: 500px;
+  height: 300px;
+  background-color: #fcbf49;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_button {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+  background: linear-gradient(120deg, #d62828, #f77f00, #fcbf49);
+  background-size: 200% 200%;
+  background-position: left center;
+  color: #003049;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.home_button:hover {
+  background-position: right center; /* 🔥 Slides gradient */
+  transform: scale(1.05); /* 🔍 Grows slightly */
+}
+
+
+.welcome-text {
+  color: #003049;
+  font-size: 26px;
+}
+
+.form-window {
+  height: 610px;
+  max-width: 1100px;
+  width: 100%;
+  background-color: #fcbf49;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+.form-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+
+}
+
+.column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 2px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-family: "Winky Rough", sans-serif;
+  color: #003049;
+  background-color: #ffe8c2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #d62828;
+  outline: none;
+  box-shadow: 0 0 5px rgba(214, 40, 40, 0.3);
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #003049;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#sub-but {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+  background: linear-gradient(120deg, #d62828, #f77f00, #fcbf49);
+  background-size: 200% 200%;
+  background-position: left center;
+  color: #003049;
+  font-size: 18px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+#sub-but:hover {
+  background-position: right center; /* 🔥 Slides gradient */
+  transform: scale(1.05);
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-box {
+  width: 500px;
+  height: 300px;
+  background-color: #fcbf49;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
